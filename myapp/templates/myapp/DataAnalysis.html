@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Analyzed</title>
+</head>
+<body>
+<h1>Graph Services</h1>
+
+<form action="{% url 'process_form' %}" method="GET">
+  {% csrf_token %}
+  <label for="option1">
+    <input type="checkbox" id="option1" name="options[]" value="Order by Item Type">
+    Order by Item Type
+  </label>
+  <br>
+  <label for="option2">
+    <input type="checkbox" id="option2" name="options[]" value="Order by State">
+    Order by State
+  </label>
+  <br>
+  <label for="option3">
+    <input type="checkbox" id="option3" name="options[]" value="Top 5 Branches">
+    Top 5 Branches
+  </label>
+  <br>
+  <!-- Add more checkboxes as needed -->
+
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>

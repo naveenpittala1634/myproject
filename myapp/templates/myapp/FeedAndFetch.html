@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Text with Submit</title>
+</head>
+<body>
+    <html>
+    <head>
+        <title>Input Text with Submit</title>
+    </head>
+    <body>
+    <style>
+        /* Style for the form container */
+        .form-container {
+            text-align: center;
+            margin: 20px;
+        }
+
+        /* Style for labels */
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Style for text input fields */
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        /* Style for submit buttons */
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Hover effect for submit buttons */
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+    <div class="form-container">
+        <form action="{% url 'store_data' %}" method="POST">
+            {% csrf_token %}
+            <label for="userInput1">POST</label>
+            <input type="text" id="userInput1" name="userInput1" placeholder="Input column data">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div class="form-container">
+        <form action="{% url 'get_data_from_db' %}" method="GET">
+            <label for="userInput">GET</label>
+            <input type="text" id="userInput" name="userInput" placeholder="Give the order id">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    </body>
+    </html>
+
+</form>
+</body>
+</html>

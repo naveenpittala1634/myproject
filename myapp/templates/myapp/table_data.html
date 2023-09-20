@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>item_type</th>
+        <th>order_state</th>
+        <th>last_update_time</th>
+        <th>branch</th>
+        <th>customer</th>
+        <th>price</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for sublist in my_data %}
+    <tr>
+        <td>{{ sublist.0 }}</td>
+        <td>{{ sublist.1 }}</td>
+        <td>{{ sublist.2 }}</td>
+        <td>{{ sublist.3 }}</td>
+        <td>{{ sublist.4 }}</td>
+        <td>{{ sublist.5 }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>

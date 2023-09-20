@@ -1,0 +1,18 @@
+<!-- form_template.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Head content here -->
+</head>
+<body>
+<form action="{% url 'process_form' %}" method="post">
+  <!-- Form fields here -->
+  <input type="submit" value="Submit">
+</form>
+
+<form action="{% url 'get_data_from_db' %}" method="get">
+  <!-- Form fields here -->
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>
